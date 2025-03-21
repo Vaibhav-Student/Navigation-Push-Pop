@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_push_pop/third_page.dart';
 
 class SecondPage extends StatelessWidget {
   @override
@@ -7,13 +8,29 @@ class SecondPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Second Page'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back to First Page'),
-        ),
+      body: Column(
+        children: [
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Go back to First Page'),
+            ),
+          ),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (context) => ThirdPage()),
+                (route) => false,
+                );
+              },
+              child: Text('Go back to Third Page'),
+            ),
+          ),
+        ],
       ),
     );
   }
