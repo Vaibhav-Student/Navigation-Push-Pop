@@ -4,7 +4,7 @@ import 'package:navigation_push_pop/third_page.dart';
 
 class SecondPage extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+ add   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Second Page'),
