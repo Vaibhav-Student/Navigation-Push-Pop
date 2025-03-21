@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_push_pop/fourth_page.dart';
 import 'package:navigation_push_pop/third_page.dart';
 
 class SecondPage extends StatelessWidget {
@@ -30,6 +31,17 @@ class SecondPage extends StatelessWidget {
               child: Text('Go back to Third Page'),
             ),
           ),
+          Center(
+            child: ElevatedButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => FourthPage()),
+              );
+            },
+            child: Text('Go to Fourth Page'),
+          ),
+        ),
         ],
       ),
     );

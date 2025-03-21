@@ -7,13 +7,17 @@ class ThirdPage extends StatelessWidget{
       appBar: AppBar(
         title: Text('Third Page'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back to First Page'),
-        ),
+      body: Column(
+        children: [
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Go back to First Page'),
+            ),
+          ),
+        ],
       ),
     );
   }
