@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_push_pop/second_page.dart';
+import 'package:navigation_push_pop/fifth_page.dart';
 
 class FourthPage extends StatelessWidget {
   @override
@@ -13,10 +13,10 @@ class FourthPage extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondPage()),
+                  MaterialPageRoute(builder: (context) => FifthPage()),
                 );
               },
-              child: Text("Push Replacement"),
+              child: Text("Fifth Page"),
             ),
           ),
     );
